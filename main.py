@@ -1,5 +1,3 @@
-#胡欣 2023080160 Source Code
-
 import sys, random, heapq
 from collections import deque 
 import pygame
