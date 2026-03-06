@@ -194,6 +194,7 @@ The solver successfully finds a globally optimal solution and visualizes the ent
 
 ## Author
 
-Hu Xin  
+Heather Xin Coyne  
 Tsinghua University  
 Artificial Intelligence Course Project
+
