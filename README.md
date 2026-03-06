@@ -1,9 +1,10 @@
 # Tile Matching Puzzle Solver
+
 Automatic solver for a tile-matching puzzle using **Breadth-First Search (BFS)** and **Uniform Cost Search (UCS)**.
 
-This project was developed as part of an Artificial Intelligence course project.
+This project was developed as part of an **Artificial Intelligence course project**.
 
-The program generates a puzzle board and automatically computes the optimal sequence of moves needed to eliminate all tile pairs while minimizing total cost.
+The program generates a puzzle board and automatically computes the optimal sequence of moves required to eliminate all tile pairs while minimizing the total cost.
 
 ---
 
@@ -13,14 +14,14 @@ The puzzle board is represented as a **2D grid** where each colored tile appears
 
 Tiles can slide across empty spaces in four directions:
 
-- Up
-- Down
-- Left
-- Right
+- Up  
+- Down  
+- Left  
+- Right  
 
 When two identical tiles align horizontally or vertically with **no obstacles between them**, they are removed from the board.
 
-The goal is to find a sequence of moves that removes all tiles with **minimum total cost**.
+The goal is to find a sequence of moves that removes all tiles with the **minimum total cost**.
 
 ---
 
@@ -32,10 +33,10 @@ BFS is used to compute the **shortest sliding path** between two matching tiles.
 
 The algorithm:
 
-1. Starts from a tile position
-2. Expands reachable empty cells in four directions
-3. Tracks visited positions to avoid redundant exploration
-4. Stops when the matching tile can be connected
+1. Starts from a tile position  
+2. Expands reachable empty cells in four directions  
+3. Tracks visited positions to avoid redundant exploration  
+4. Stops when the matching tile can be connected  
 
 Because BFS explores nodes level-by-level, the first valid path found is guaranteed to be the **shortest path**.
 
@@ -47,8 +48,11 @@ After computing shortest paths for each tile pair, the solver must determine the
 
 Each color is assigned a **random weight (1–5)**.
 
-The cost of eliminating a pair is defined as: cost = sliding_steps × weight
+The cost of eliminating a pair is defined as:
 
+```
+cost = sliding_steps × weight
+```
 
 Uniform Cost Search explores board states in order of **lowest cumulative cost**, ensuring the final solution has the **minimum total cost**.
 
@@ -72,7 +76,6 @@ Uniform Cost Search explores board states in order of **lowest cumulative cost**
 3. The solver computes the optimal elimination sequence.
 4. A visualization displays the step-by-step solution process.
 
-
 ### Example Configuration
 
 Board size: **8 × 8**  
@@ -95,11 +98,30 @@ Tile pairs: **10**
 ```
 tile-matching-puzzle-solver
 │
-├── main.py        # main solver logic
-├── graphs.py      # visualization utilities
-├── run.py         # program entry point
+├── main.py            # main solver logic
+├── graphs.py          # visualization utilities
+├── run.py             # plotting / additional utilities
+├── requirements.txt   # project dependencies
 ├── README.md
 └── .gitignore
+```
+
+---
+
+## Requirements
+
+Install the required Python libraries using:
+
+```bash
+pip install -r requirements.txt
+```
+
+The required dependencies are:
+
+```
+pygame
+matplotlib
+numpy
 ```
 
 ---
@@ -111,7 +133,7 @@ Make sure Python is installed.
 Run the program:
 
 ```bash
-python run.py
+python main.py
 ```
 
 The program will prompt the user to enter the board size and number of tile pairs before generating and solving the puzzle.
