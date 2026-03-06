@@ -1,4 +1,4 @@
-<img width="374" height="565" alt="image" src="https://github.com/user-attachments/assets/5b5b7071-ea66-4857-8549-b74db5b35966" /><img width="493" height="128" alt="image" src="https://github.com/user-attachments/assets/297bb28f-ad22-4c4a-bb79-11f4db1f6afc" /># Tile Matching Puzzle Solver
+# Tile Matching Puzzle Solver
 Automatic solver for a tile-matching puzzle using **Breadth-First Search (BFS)** and **Uniform Cost Search (UCS)**.
 
 This project was developed as part of an Artificial Intelligence course project.
@@ -158,4 +158,5 @@ In this example:
 - Total weighted cost: **23**
 
 The solver successfully finds a globally optimal solution and visualizes the entire process.
+
 
